@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menos_5000_menos_30">0.250</string>
+    <string name="menos_5000_mas_30">0.275</string>
+    <string name="mas_5000_menos_99999_menos_30">0.300</string>
+    <string name="mas_5000_menos_99999_mas_30">0.323</string>
+    <string name="mas_99999_menos_30">0.350</string>
+    <string name="mas_99999_mas_30">0.385</string>
+</resources>
