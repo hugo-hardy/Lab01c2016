@@ -67,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
             tvMensaje.setText("Error en el importe ingresado");
         }
 
-        tvMonto.setText("$"+calcularInteres(sbDias.getProgress(),importeIngresado,obtenerTasa(importeIngresado,sbDias.getProgress())));
+        tvMonto.setText("$"+calcularMontoTotal(sbDias.getProgress(),importeIngresado,obtenerTasa(importeIngresado,sbDias.getProgress())));
 
         tvMensaje.setTextColor(getResources().getColor(R.color.colorMensajeCorrecto));
         tvMensaje.setText(R.string.mensaje_correcto);
 
     }
-    private String calcularInteres(int cantidad_dias,double importe, double tasa){
+    private String calcularMontoTotal(int cantidad_dias,double importe, double tasa){
     //Calcula el monto total para mostrar
         String resultado = "0.00";
         DecimalFormat formato = new DecimalFormat("#.00");
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private double obtenerTasa(double unMonto, int dias){
     //Obtiene la tasa del archivo xml
         double resultado = 0.00;
-        
+
         if(unMonto > 0 & unMonto <= 5000)
         {
            if(dias < 30)
