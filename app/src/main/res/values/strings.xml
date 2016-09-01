@@ -9,4 +9,5 @@
     <string name="rendimiento">Rendimiento</string>
     <string name="boton_texto">HACER PLAZO FIJO</string>
     <string name="checkbox_texto">Renovar Automáticamente al Vencimiento</string>
+    <string name="mensaje_correcto">Su plazo fijo se ha calculado correctamente</string>
 </resources>
