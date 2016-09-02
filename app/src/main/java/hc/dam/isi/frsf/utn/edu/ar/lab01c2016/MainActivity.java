@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
             tvMensaje.setText("Error en el importe ingresado");
         }
 
-        tvMonto.setText("$"+calcularMontoTotal(sbDias.getProgress(),importeIngresado,obtenerTasa(importeIngresado,sbDias.getProgress())));
+        double tasa = obtenerTasa(importeIngresado,sbDias.getProgress());
 
+        tvMonto.setText("$"+calcularMontoTotal(sbDias.getProgress(),importeIngresado,tasa));
         tvMensaje.setTextColor(getResources().getColor(R.color.colorMensajeCorrecto));
         tvMensaje.setText(R.string.mensaje_correcto);
 
@@ -78,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
         String resultado = "0.00";
         DecimalFormat formato = new DecimalFormat("#.00");
 
-        resultado = (formato.format(importe+(importe * ((Math.pow(1 + tasa, (cantidad_dias/360))) - 1))));
+        float prop_dias =  (float)cantidad_dias/(float)360;
+
+        resultado = (formato.format(importe+(importe * ((Math.pow(1 + tasa, prop_dias)) - 1))));
         return resultado;
     }
 
