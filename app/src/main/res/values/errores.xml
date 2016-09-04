@@ -1,0 +1,8 @@
+<resources>
+    <string name="error_importe">Error en el Importe ingresado</string>
+    <string name="error_correo">Error en el Correo ingresado</string>
+    <string name="error_cuit">Error en el CUIT ingresado</string>
+    <string name="error_correo_vacio">Ingrese una dirección de Correo</string>
+    <string name="error_cuit_vacio">Ingrese un número de CUIT</string>
+    <string name="error_importe_vacio">Ingrese el Importe del Plazo Fijo</string>
+</resources>
